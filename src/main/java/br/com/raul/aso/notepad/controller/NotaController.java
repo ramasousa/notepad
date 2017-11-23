@@ -26,12 +26,7 @@ public class NotaController {
     }
 
     @PostMapping
-    private void save(@RequestBody Nota nota) {
-        notaComponent.salvar(nota);
-    }
-
-    @PostMapping
-    private void saveAll(@RequestBody List<Nota> notas){
+    private void save(@RequestBody List<Nota> notas) {
         for (Nota nota: notas)
         {
             if(nota != null){
