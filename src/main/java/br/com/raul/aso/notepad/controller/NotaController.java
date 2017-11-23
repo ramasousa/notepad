@@ -34,7 +34,9 @@ public class NotaController {
     private void saveAll(@RequestBody List<Nota> notas){
         for (Nota nota: notas)
         {
-            notaComponent.salvar(nota);
+            if(nota != null){
+                notaComponent.salvar(nota);
+            }
         }
     }
 
