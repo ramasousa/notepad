@@ -30,6 +30,14 @@ public class NotaController {
         notaComponent.salvar(nota);
     }
 
+    @PostMapping
+    private void saveAll(@RequestBody List<Nota> notas){
+        for (Nota nota: notas)
+        {
+            notaComponent.salvar(nota);
+        }
+    }
+
     @DeleteMapping
     private void deleteAll() {
         notaComponent.apagarTodos();
