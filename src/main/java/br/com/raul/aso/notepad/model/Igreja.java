@@ -9,7 +9,7 @@ public class Igreja {
     @Id
     private String id;
     private String nome;
-    private String endereco;
+    private Endereco endereco;
 
     public String getId() {
         return id;
@@ -27,11 +27,11 @@ public class Igreja {
         this.nome = nome;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 }
